@@ -175,7 +175,7 @@ experiment in [ArrayExpress](https://www.ebi.ac.uk/arrayexpress/). For Mass Spec
 The **Downloads** tab for transcriptomics experiments contains all the files that you can download such as: i) gene expression
 results in tab-delimited format, ii) file containing the R object representing the experiment and iii)
 results of hierarchical clustering using the top 100 most variable genes across all tissues (or other
-condition) in the experiment. For Mass Spectrometry proteomics experiments the the files that you can download are: i) raw unprocessed output for baseline Data Dependent Analysis (DDA) experiments, ii) post-processed expression values, iii) quality assessment summary of the experimental runs, iv) input parameters to process raw data files for DDA experiments and v) the experimental design template of all samples.
+condition) in the experiment. For Mass Spectrometry proteomics experiments the files that one can download are: i) raw unprocessed output for baseline Data Dependent Analysis (DDA) experiments, ii) post-processed expression values, iii) quality assessment summary of the experimental runs, iv) input parameters to process raw data files for DDA experiments and v) the experimental design template of all samples.
 
 
 #### Transcript quantification

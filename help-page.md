@@ -104,10 +104,14 @@ for each gene in each tissue (or other condition).
 
 #### Specify a minimum expression level
 
-Use the **Expression value** box to specify a different minimum level (the default one is 0.5) so
+Use the **Expression value** box to specify a different minimum level (the default one for transcriptomics is 0.5) so
 only genes expressed above this level are displayed.
 
 ![set minimum expression level](assets/img/specify_expression_level.png)
+
+For proteomics experiments the expression values are displayed as parts per billion (ppb). The default minimum expression value is 0.
+
+![set minimum expression level](assets/img/specify_expression_proteomics.png)
 
 #### Most specific search
 

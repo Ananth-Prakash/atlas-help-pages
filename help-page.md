@@ -52,6 +52,13 @@ as "carcinoma" and other terms that are children of the cancer entry in EFO.
 
 ![Homepage query boxes](assets/img/homepage_query.png)
 
+#### Finding an individual dataset
+
+To find an individual experiment, change the experiment accession (example E-MTAB or E-PROT) in the URL.
+
+![Homepage query boxes](assets/img/browse_results_accession.png)
+
+
 ### Baseline expression results
 
 When you search for a particular gene (e.g. *UMOD*) in one species (e.g. Homo sapiens), the

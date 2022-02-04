@@ -16,6 +16,10 @@ You can filter and/or re-order the table content using the categories and search
 
 ![Browse experiments table](assets/img/browse_exp_tab.png)
 
+Proteomics experiments can be listd by typing for keyword proteomics in the **search all columns** field.
+
+![Browse experiments table](assets/img/browse_proteomics_tab.png)
+
 You can also filter the table content using the two boxes above the table - the **Kingdom** and
 the **Experiment Type** filter boxes, which allow you to narrow down the results according to your
 taxon of interest and/or experiment type (baseline vs differential).

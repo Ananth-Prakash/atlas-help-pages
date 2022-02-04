@@ -111,7 +111,7 @@ only genes expressed above this level are displayed.
 
 For proteomics experiments the expression values are displayed as parts per billion (ppb). The default minimum expression value is 0.
 
-![set minimum expression level](assets/img/specify_expression_proteomics.png)
+![set minimum expression level](assets/img/specify_expression_level_proteomics.png)
 
 #### Most specific search
 

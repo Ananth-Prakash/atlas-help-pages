@@ -166,17 +166,17 @@ You can display the whole experiment just by clicking on the **Choose all** butt
 #### Other information in the baseline experiment page
 
 The **Experiment Design** tab shows RNA-seq processing run accessions (from
-[ENA](https://www.ebi.ac.uk/ena)), along with their corresponding biological sample
-characteristics and experimental variables values.
+[ENA](https://www.ebi.ac.uk/ena)) for transcriptomics experiments and Mass Spectrometry processing runs for proteomics samples, along with their corresponding biological sample characteristics and experimental variables values.
 
-The **Supplementary Information** tab includes Analysis Methods (list of the analysis methods we
+The **Supplementary Information** tab for transcriptomics experiments includes Analysis Methods (list of the analysis methods we
 applied to the raw data in FASTQ format to obtain gene expression results) and Resources to see the
-experiment in [ArrayExpress](https://www.ebi.ac.uk/arrayexpress/).
+experiment in [ArrayExpress](https://www.ebi.ac.uk/arrayexpress/). For Mass Spectrometry proteomics experiments the analysis methods include data processing protocols for raw Mass Spectrometry data and for post-processing the results, which also includes mapping UniProt protein accessions to Ensembl Gene identifiers. 
 
-The **Downloads** tab contains all the files that you can download such as: i) gene expression
+The **Downloads** tab for transcriptomics experiments contains all the files that you can download such as: i) gene expression
 results in tab-delimited format, ii) file containing the R object representing the experiment and iii)
 results of hierarchical clustering using the top 100 most variable genes across all tissues (or other
-condition) in the experiment.
+condition) in the experiment. For Mass Spectrometry proteomics experiments the the files that you can download are: i) raw unprocessed output for baseline Data Dependent Analysis (DDA) experiments, ii) post-processed expression values, iii) quality assessment summary of the experimental runs, iv) input parameters to process raw data files for DDA experiments and v) the experimental design template of all samples.
+
 
 #### Transcript quantification
 
@@ -195,6 +195,13 @@ Abundance of transcripts from RNA-seq data was quantified using
 [kallisto](https://pachterlab.github.io/kallisto/about).
 
 ![transcript quantification](assets/img/transcript_quantification.png)
+
+
+#### Protein to Gene mapping and quantification
+
+For Mass Spectrometry baseline proteomics experiments the protein abundances are quantified in units of parts per billion (ppb).
+The abundances of proteins are displayed in terms of their parent gene identifiers.
+Expression Atlas uses a Gene ID reference frame, therefore to integrate proteomics results the UniProt protein accessions were mapped to Ensembl Gene identifiers using the bioconductor package 'mygene'. 
 
 ### Differential expression results
 

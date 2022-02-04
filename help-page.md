@@ -16,7 +16,7 @@ You can filter and/or re-order the table content using the categories and search
 
 ![Browse experiments table](assets/img/browse_exp_tab.png)
 
-Proteomics experiments can be listd by typing for keyword proteomics in the **search all columns** field.
+Proteomics experiments can be listed by typing the keyword proteomics in the **search all columns** field.
 
 ![Browse experiments table](assets/img/browse_proteomics_tab.png)
 

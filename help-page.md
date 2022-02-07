@@ -109,7 +109,7 @@ only genes expressed above this level are displayed.
 
 ![set minimum expression level](assets/img/specify_expression_level.png)
 
-For proteomics experiments the expression values are displayed as parts per billion (ppb). The default minimum expression value is 0.
+For details on the proteomics experiments' expression values, please see [Protein quantification](#protein-quantification).  
 
 ![set minimum expression level](assets/img/specify_expression_level_proteomics.png)
 
@@ -165,8 +165,8 @@ You can display the whole experiment just by clicking on the **Choose all** butt
 
 #### Other information in the baseline experiment page
 
-The **Experiment Design** tab shows RNA-seq processing run accessions (from
-[ENA](https://www.ebi.ac.uk/ena)) for transcriptomics experiments and Mass Spectrometry processing runs for proteomics samples, along with their corresponding biological sample characteristics and experimental variables values.
+The **Experiment Design** tab shows RNA-seq processing run accessions (from [ENA](https://www.ebi.ac.uk/ena) ) for transcriptomics experiments.
+For proteomics experiments, the mass spectrometry runs are shown along with their corresponding biological sample characteristics and experimental variables values.
 
 The **Supplementary Information** tab for transcriptomics experiments includes Analysis Methods (list of the analysis methods we
 applied to the raw data in FASTQ format to obtain gene expression results) and Resources to see the
@@ -175,8 +175,12 @@ experiment in [ArrayExpress](https://www.ebi.ac.uk/arrayexpress/). For Mass Spec
 The **Downloads** tab for transcriptomics experiments contains all the files that you can download such as: i) gene expression
 results in tab-delimited format, ii) file containing the R object representing the experiment and iii)
 results of hierarchical clustering using the top 100 most variable genes across all tissues (or other
-condition) in the experiment. For Mass Spectrometry proteomics experiments the files that one can download are: i) raw unprocessed output for baseline Data Dependent Analysis (DDA) experiments, ii) post-processed expression values, iii) quality assessment summary of the experimental runs, iv) input parameters to process raw data files for DDA experiments and v) the experimental design template of all samples.
-
+condition) in the experiment. For mass spectrometry based proteomics experiments the files that one can download are: 
+i) raw unprocessed output for baseline Data Dependent Analysis (DDA) experiments, 
+ii) post-processed expression values, 
+iii) quality assessment summary of the experimental runs, 
+iv) input parameters to process raw data files for DDA experiments and 
+v) the experimental design template of all samples.
 
 #### Transcript quantification
 
@@ -197,11 +201,20 @@ Abundance of transcripts from RNA-seq data was quantified using
 ![transcript quantification](assets/img/transcript_quantification.png)
 
 
-#### Protein to Gene mapping and quantification
+#### Protein quantification
+For proteomics experiments the expression values are displayed as parts per billion (ppb), or normalised relative intensity if no conversion is possible (MS-DIA). 
+Please see details on each experiment in the 'Analysis Method' section of the Supplementary Information.
+The default minimum expression value is 0.
 
-For Mass Spectrometry baseline proteomics experiments the protein abundances are quantified in units of parts per billion (ppb).
-The abundances of proteins are displayed in terms of their parent gene identifiers.
-Expression Atlas uses a Gene ID reference frame, therefore to integrate proteomics results the UniProt protein accessions were mapped to Ensembl Gene identifiers using the bioconductor package 'mygene'. 
+##### Gene mapping
+Proteomics mass spectrometry data analyses need to conduct an 'identification' step after which measurements are assigned a peptide ID, usually a UniProt accession and sequence.
+Expression Atlas uses a Gene ID reference frame, therefore to integrate proteomics results the UniProt protein accessions are mapped to Ensembl Gene identifiers using the bioconductor package 'mygene'. 
+Further details are described in the 'Analysis Method' section of the Supplementary Information to each experiment.
+
+##### Filters included in the Data Processing Protocol
+Protein results were 'identification' FDR filtered and also filtered from 'identifications' with none or multiple Ensembl gene IDs. 
+`More DDA TBA?`
+Additionally in MS-DIA, Protein groups with insufficient identification of target features (i.e. peptides) of the protein, were excluded.
 
 ### Differential expression results
 
@@ -251,7 +264,7 @@ Use the **Genes search** box to search for a particular gene. You can search wit
 symbols (e.g. NEBL), Ensembl ID (e.g. ENSG00000078114), UniProt accessions (e.g. A0A0U1RRK0) or
 InterPro terms (e.g. Nebulin repeat).
 
-On microarray experiments a gene can be represented by more than one design element, also known as
+In microarray experiments a gene can be represented by more than one design element, also known as
 probe or probe set. This is the oligonucleotide probe on the microarray that targets that gene.
 
 #### Most specific search
